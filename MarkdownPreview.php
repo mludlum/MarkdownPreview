@@ -40,8 +40,7 @@ class MarkdownPreviewPlugin extends MantisPlugin
     function resources($p_event)
     {
 
-        $resources .= '<link rel="stylesheet" type="text/css" href="' . plugin_file('mpreview.css') . '" />' .
-            '<script type="text/javascript" src="' . plugin_page('mpreview.php') . '"></script>' ;
+        $resources = '<script type="text/javascript" src="' . plugin_page('mpreview.php') . '"></script>' ;
 
 
         return $resources;
