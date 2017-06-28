@@ -4,7 +4,7 @@ header('Content-Type: text/javascript');
 
 ?>
 $(document).ready(function() {
-	$('textarea.form-control').each(function(index, el).each(function(index, el) {
+	$('textarea.form-control').each(function(index, el) {
 		var $el = $(el);
 		var mpId = 'mp-'+el.id;
 		var html = '<div id="'+mpId+'" class="markdown-preview" data="'+el.id+'"></div>';
