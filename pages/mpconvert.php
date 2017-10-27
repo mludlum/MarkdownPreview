@@ -1,6 +1,18 @@
 <?php
 
-require_lib( 'parsedown' . DIRECTORY_SEPARATOR . 'Parsedown.php' );
+global $g_vendor_path;
+$parsedown_sub = 'parsedown'.DIRECTORY_SEPARATOR.'Parsedown.php';
+if (file_exists($g_vendor_path.DIRECTORY_SEPARATOR.$parsedown_sub))
+{
+        require_lib($parsedown_sub);
+}
+// version 2.7
+else if (file_exists($g_vendor_path.DIRECTORY_SEPARATOR.'erusev'.DIRECTORY_SEPARATOR.$parsedown_sub))
+{
+        require_lib('erusev'.DIRECTORY_SEPARATOR.$parsedown_sub);
+}
+else
+        die('<em style="color:red">parsedown library not available.</em>');
 
 
 $Parsedown = new Parsedown();
