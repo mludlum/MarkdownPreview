@@ -16,7 +16,7 @@ $(document).ready(function() {
                                 $target.html(data);
                         })
                         .fail(function() {
-                           alert( "error" );
+                           console.log( "error converting markdown" );
                         });
                         //.always(function() {
                         //});
